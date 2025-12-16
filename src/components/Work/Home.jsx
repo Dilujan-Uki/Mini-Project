@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import DestinationSearch from './Search';  // File is Search.jsx in same folder
-import WeatherWidget from './Weather';     // File is Weather.jsx in same folder
+import DestinationSearch from './Search';  
+import WeatherWidget from './Weather';     
 
 const HomePage = () => {
   const [selectedDestination, setSelectedDestination] = useState('');

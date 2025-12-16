@@ -1,6 +1,5 @@
-// src/components/Work/TripPage.jsx
 import React, { useState } from 'react';
-import ItineraryCard from './Card';  // FIXED THIS LINE
+import ItineraryCard from './Card'; 
 
 const TripsPage = () => {
   const [trips, setTrips] = useState([]);
