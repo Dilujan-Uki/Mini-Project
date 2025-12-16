@@ -1,0 +1,287 @@
+/* src/App.css */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #2d8cff;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  background: #2d8cff;
+  color: white;
+}
+
+/* Home Page */
+.home-page {
+  text-align: center;
+}
+
+.hero {
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.search-area, .weather-area, .cta-area {
+  margin: 30px 0;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-input {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.search-btn {
+  padding: 15px;
+  background: #2d8cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-btn:hover {
+  background: #1a7ae6;
+}
+
+/* Weather Widget */
+.weather-widget {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.weather-info {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f0f8ff;
+  border-radius: 8px;
+}
+
+.weather-info p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+/* CTA Button */
+.cta-button {
+  padding: 15px 30px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #45a049;
+}
+
+/* Trips Page */
+.trips-page {
+  padding: 20px;
+}
+
+.add-trip-btn {
+  padding: 12px 25px;
+  background: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.trip-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trip-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Trip Card */
+.trips-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.trip-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.delete-btn {
+  padding: 8px 15px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn {
+  padding: 10px 20px;
+  background: #2d8cff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.no-trips {
+  text-align: center;
+  color: #888;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+.api-note {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .trips-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+.suggestions {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.suggestion-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.suggestion-item:hover {
+  background: #f0f8ff;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
