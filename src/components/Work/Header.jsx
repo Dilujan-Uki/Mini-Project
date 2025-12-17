@@ -8,7 +8,7 @@ const Header = () => {
         <div className="flex flex-col md:flex-row justify-between items-center p-6">
           <div className="mb-4 md:mb-0">
             <h1 className="text-3xl md:text-4xl font-bold">
-              <span className="gradient-text">✈️ TravelPlanner</span>
+              <span className="gradient-text"> TravelPlanner</span>
             </h1>
             <p className="text-white/80 text-sm mt-1">Plan your perfect journey</p>
           </div>

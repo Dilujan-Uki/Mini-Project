@@ -62,7 +62,7 @@ const TripDetails = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
-                {/* Back Button */}
+             
                 <button
                     onClick={() => navigate('/trips')}
                     className={`mb-6 px-5 py-3 bg-gradient-to-r ${gradients.secondary} text-white rounded-xl hover:shadow-xl transition-all flex items-center hover:scale-105`}
@@ -70,9 +70,9 @@ const TripDetails = () => {
                     <span className="mr-2">←</span> Back to Trips
                 </button>
 
-                {/* Main Card */}
+                
                 <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 mb-8 border border-slate-200">
-                    {/* Header */}
+                  
                     <div className="flex flex-col md:flex-row justify-between items-start mb-10">
                         <div className="mb-6 md:mb-0">
                             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
@@ -97,7 +97,7 @@ const TripDetails = () => {
                         </div>
                     </div>
 
-                    {/* Info Cards */}
+                   
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                         <div className={`bg-gradient-to-br ${gradients.primary} p-6 rounded-2xl shadow-lg`}>
                             <h3 className="text-xl font-bold text-white mb-4">Trip Dates</h3>
@@ -117,7 +117,7 @@ const TripDetails = () => {
                         </div>
                     </div>
 
-                    {/* Activities Section */}
+                   
                     <div className="mb-10">
                         <div className="flex justify-between items-center mb-8">
                             <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
@@ -128,40 +128,9 @@ const TripDetails = () => {
                             </div>
                         </div>
 
-                        {/* Add Activity Form */}
-                        <form onSubmit={handleAddActivity} className="mb-8 bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-2xl shadow-lg border border-slate-200">
-                            <h3 className="text-2xl font-bold text-slate-800 mb-6">Add New Activity</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-                                <input
-                                    type="text"
-                                    placeholder="Activity name"
-                                    value={newActivity.name}
-                                    onChange={(e) => setNewActivity({ ...newActivity, name: e.target.value })}
-                                    className="p-4 bg-white border-2 border-slate-300 rounded-xl text-slate-800 placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-                                    required
-                                />
-                                <input
-                                    type="date"
-                                    value={newActivity.date}
-                                    onChange={(e) => setNewActivity({ ...newActivity, date: e.target.value })}
-                                    className="p-4 bg-white border-2 border-slate-300 rounded-xl text-slate-800 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-                                />
-                                <input
-                                    type="time"
-                                    value={newActivity.time}
-                                    onChange={(e) => setNewActivity({ ...newActivity, time: e.target.value })}
-                                    className="p-4 bg-white border-2 border-slate-300 rounded-xl text-slate-800 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-                                />
-                                <button 
-                                    type="submit" 
-                                    className={`p-4 bg-gradient-to-r ${gradients.success} text-white rounded-xl font-bold hover:shadow-xl transition-all hover:scale-105`}
-                                >
-                                    Add Activity
-                                </button>
-                            </div>
-                        </form>
+                      
 
-                        {/* Activities List */}
+                       
                         <div className="space-y-4">
                             {trip.activities.map(activity => (
                                 <div
@@ -215,7 +184,7 @@ const TripDetails = () => {
                         </div>
                     </div>
 
-                    {/* Map Section */}
+                   
                     <div className="mt-12">
                         <div className="flex justify-between items-center mb-8">
                             <div>
@@ -259,7 +228,7 @@ const TripDetails = () => {
                     </div>
                 </div>
 
-                {/* Footer Stats */}
+                
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                     <div className="bg-gradient-to-r from-white to-slate-50 p-6 rounded-2xl shadow-lg border border-slate-200">
                         <div className="text-3xl font-bold text-slate-800">7</div>

@@ -89,7 +89,7 @@ const TripsPage = () => {
         
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 to-blue-800 bg-clip-text text-transparent mb-4">
-            ✈️ My Travel Trips
+             My Travel Trips
           </h1>
           <p className="text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto mb-6 leading-relaxed">
             Plan, organize, and manage all your travel adventures in one place. Create detailed itineraries for your dream destinations.
@@ -285,7 +285,7 @@ const TripsPage = () => {
                   onClick={() => setShowForm(true)}
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xl font-bold rounded-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
-                  ✈️ Plan Your First Trip
+                   Plan Your First Trip
                 </button>
               </div>
             )}
