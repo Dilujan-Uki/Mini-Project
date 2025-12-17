@@ -6,12 +6,12 @@ const HomePage = () => {
   const [selectedDestination, setSelectedDestination] = useState('Paris');
 
   const popularDestinations = [
-    { name: 'Paris', color: 'from-blue-500 to-indigo-600' },
-    { name: 'Tokyo', color: 'from-cyan-500 to-blue-600' },
-    { name: 'New York', color: 'from-emerald-500 to-teal-600' },
-    { name: 'London', color: 'from-amber-500 to-orange-600' },
-    { name: 'Dubai', color: 'from-yellow-500 to-amber-600' },
-    { name: 'Sydney', color: 'from-violet-500 to-purple-600' },
+    { name: 'Paris', color: 'from-red-600 to-indigo-500' },
+    { name: 'Tokyo', color: 'from-blue-500 to-indigo-600' },
+    { name: 'New York', color: 'from-green-500 to-cyan-600' },
+    { name: 'London', color: 'from-cyan-500 to-yellow-500' },
+    { name: 'Dubai', color: 'from-green-500 to-yellow-400' },
+    { name: 'Sydney', color: 'from-red-400 to-blue-600' },
   ];
 
   return (
@@ -143,7 +143,7 @@ const HomePage = () => {
         </div>
 
         
-        <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl shadow-xl p-8 mb-12">
+        <div className="bg-gradient-to-r from-blue-400 to-yellow-500 rounded-2xl shadow-xl p-8 mb-12">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0">
               <h3 className="text-2xl font-bold text-white">Ready to Plan Your Adventure?</h3>

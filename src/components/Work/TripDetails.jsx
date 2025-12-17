@@ -65,7 +65,7 @@ const TripDetails = () => {
              
                 <button
                     onClick={() => navigate('/trips')}
-                    className={`mb-6 px-5 py-3 bg-gradient-to-r ${gradients.secondary} text-white rounded-xl hover:shadow-xl transition-all flex items-center hover:scale-105`}
+                    className={`mb-6 px-5 py-3 bg-yellow-400 text-white rounded-xl hover:shadow-xl transition-all flex items-center hover:scale-105`}
                 >
                     <span className="mr-2">←</span> Back to Trips
                 </button>
@@ -99,7 +99,7 @@ const TripDetails = () => {
 
                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                        <div className={`bg-gradient-to-br ${gradients.primary} p-6 rounded-2xl shadow-lg`}>
+                        <div className={`bg-gradient-to-r from-green-600 to-blue-500 p-6 rounded-2xl shadow-lg`}>
                             <h3 className="text-xl font-bold text-white mb-4">Trip Dates</h3>
                             <div className="flex items-center">
                                 <div className="bg-white/20 p-4 rounded-xl">
@@ -111,7 +111,7 @@ const TripDetails = () => {
                             </div>
                         </div>
                         
-                        <div className={`bg-gradient-to-br ${gradients.secondary} p-6 rounded-2xl shadow-lg`}>
+                        <div className={`bg-gradient-to-r from-green-600 to-blue-500 p-6 rounded-2xl shadow-lg`}>
                             <h3 className="text-xl font-bold text-white mb-4">Description</h3>
                             <p className="text-white/95 text-lg leading-relaxed">{trip.description}</p>
                         </div>

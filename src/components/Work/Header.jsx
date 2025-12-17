@@ -47,11 +47,6 @@ const Header = () => {
           </nav>
           
           <div className="mt-4 md:mt-0 flex items-center space-x-3">
-            <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-yellow-400 to-red-500 border-2 border-white"></div>
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 border-2 border-white"></div>
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-400 to-blue-500 border-2 border-white"></div>
-            </div>
             <button className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full text-sm hover:shadow-lg transition-shadow">
               + New Trip
             </button>
