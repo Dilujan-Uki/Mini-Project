@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dilujan-Uki/Mini-Project/static/css/main.65bfc2f5.css",
+    "main.js": "/Dilujan-Uki/Mini-Project/static/js/main.f72c3d56.js",
+    "static/js/453.38e7d305.chunk.js": "/Dilujan-Uki/Mini-Project/static/js/453.38e7d305.chunk.js",
+    "index.html": "/Dilujan-Uki/Mini-Project/index.html",
+    "main.65bfc2f5.css.map": "/Dilujan-Uki/Mini-Project/static/css/main.65bfc2f5.css.map",
+    "main.f72c3d56.js.map": "/Dilujan-Uki/Mini-Project/static/js/main.f72c3d56.js.map",
+    "453.38e7d305.chunk.js.map": "/Dilujan-Uki/Mini-Project/static/js/453.38e7d305.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65bfc2f5.css",
+    "static/js/main.f72c3d56.js"
+  ]
+}
