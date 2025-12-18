@@ -39,7 +39,7 @@
 
 ## Core Features:
 
-1. 🌍 Destination Discovery & Search
+1. Destination Discovery & Search
 
 2. Intelligent search with autocomplete suggestions
 
@@ -47,7 +47,7 @@
 
 4. Coordinates and location previews
 
-## 🗺️ Interactive Maps
+##  Interactive Maps
 
 1. Live OpenStreetMap integration
 
@@ -55,7 +55,7 @@
 
 3. Route planning and location exploration
 
-## ☀️ Real-Time Weather Integration
+##  Real-Time Weather Integration
 
 1. Live weather forecasts for any destination
 
@@ -63,7 +63,7 @@
 
 3. Temperature, humidity, and conditions display
 
-## 📅 Smart Trip Planning
+##  Smart Trip Planning
 
 1. Create and manage multiple trips
 
@@ -73,7 +73,7 @@
 
 4. Collaborative trip sharing
 
-## 🎨 Modern UI/UX Design
+##  Modern UI/UX Design
 
 1. Glass-morphism effects and gradients
 
