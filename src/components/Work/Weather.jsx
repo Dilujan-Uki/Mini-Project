@@ -3,6 +3,10 @@ import React, { useEffect, useState } from 'react';
 const WeatherWidget = ({ city }) => {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; 
+  const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
   useEffect(() => {
     if (city) {
@@ -12,33 +16,68 @@ const WeatherWidget = ({ city }) => {
 
   const fetchWeather = async () => {
     setLoading(true);
+    setError(null);
 
-    setTimeout(() => {
-      const weatherConditions = [
-        { temp: 25, condition: 'Sunny', humidity: 65, icon: '☀️' },
-        { temp: 18, condition: 'Cloudy', humidity: 75, icon: '☁️' },
-        { temp: 22, condition: 'Partly Cloudy', humidity: 70, icon: '⛅' },
-        { temp: 15, condition: 'Rainy', humidity: 85, icon: '🌧️' },
-        { temp: 28, condition: 'Clear', humidity: 60, icon: '☀️' }
-      ];
+    try {
       
-      const randomWeather = weatherConditions[Math.floor(Math.random() * weatherConditions.length)];
+      const response = await fetch(
+        `${API_URL}?q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`
+      );
+
+      const data = await response.json();
+
+      if (response.status !== 200) {
+        throw new Error(data.message || 'Failed to fetch weather data');
+      }
+
       setWeather({
-        ...randomWeather,
-        temp: Math.floor(Math.random() * 20) + 15 
+        temp: Math.round(data.main.temp),
+        feels_like: Math.round(data.main.feels_like),
+        humidity: data.main.humidity,
+        condition: data.weather[0].main,
+        icon: getWeatherIcon(data.weather[0].main),
       });
+    } catch (err) {
+      console.error('Weather fetch error:', err);
+      setError(err.message);
+      setWeather(null);
+    } finally {
       setLoading(false);
-    }, 800);
+    }
+  };
+
+  const getWeatherIcon = (condition) => {
+    switch (condition.toLowerCase()) {
+      case 'clear':
+        return '☀️';
+      case 'clouds':
+        return '☁️';
+      case 'rain':
+        return '🌧️';
+      case 'drizzle':
+        return '🌦️';
+      case 'thunderstorm':
+        return '⛈️';
+      case 'snow':
+        return '❄️';
+      case 'mist':
+      case 'fog':
+        return '🌫️';
+      default:
+        return '⛅';
+    }
   };
 
   return (
     <div className="weather-widget bg-white rounded-lg shadow-lg p-6">
       <h3 className="text-xl font-bold text-gray-800 mb-4">Weather in {city}</h3>
-      
+
       {loading ? (
         <div className="flex justify-center items-center h-32">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
         </div>
+      ) : error ? (
+        <div className="text-center text-red-500 p-6">{error}</div>
       ) : weather ? (
         <div className="weather-info">
           <div className="flex items-center justify-center mb-4">
@@ -55,7 +94,7 @@ const WeatherWidget = ({ city }) => {
             </div>
             <div className="bg-blue-50 p-3 rounded-lg">
               <p className="text-sm text-gray-600">Feels Like</p>
-              <p className="font-bold text-lg">{weather.temp + 2}°C</p>
+              <p className="font-bold text-lg">{weather.feels_like}°C</p>
             </div>
           </div>
         </div>
@@ -72,3 +111,4 @@ const WeatherWidget = ({ city }) => {
 };
 
 export default WeatherWidget;
+

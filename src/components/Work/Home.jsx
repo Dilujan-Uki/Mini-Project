@@ -3,7 +3,7 @@ import DestinationSearch from './Search';
 import WeatherWidget from './Weather';     
 
 const HomePage = () => {
-  const [selectedDestination, setSelectedDestination] = useState('Paris');
+  const [selectedDestination, setSelectedDestination] = useState('paris');
 
   const popularDestinations = [
     { name: 'Paris', color: 'from-red-600 to-indigo-500' },
